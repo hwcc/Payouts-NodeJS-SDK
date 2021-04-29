@@ -11,6 +11,9 @@ describe('PayoutsItemGetRequest', function () {
   it('retrieve a single payment/payout-item from a Payouts Batch', function () {
     return getPayout()
       .then((getResponse) => {
+
+        console.log(JSON.stringify(getResponse.statusCode, null, 4));
+
         chai.assert.equal(getResponse.statusCode, 200);
         chai.assert.isNotNull(getResponse.result);
 

@@ -25,6 +25,9 @@ describe('PayoutsGetRequest', function () {
   it('retrieve a payouts batch', function () {
     return getPayouts()
       .then((getResponse => {
+
+        console.log(JSON.stringify(getResponse.statusCode, null, 4));
+
         chai.assert.equal(getResponse.statusCode, 200);
         chai.assert.isNotNull(getResponse.result);
 

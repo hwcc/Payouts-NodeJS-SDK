@@ -69,6 +69,8 @@ describe('CreatePayoutsReqeust', function () {
   it('creates a Payouts Batch', function () {
     return createPayouts()
       .then((createResponse) => {
+
+        console.log(JSON.stringify(createResponse.statusCode, null, 4));
         chai.assert.equal(createResponse.statusCode, 201);
         chai.assert.isNotNull(createResponse.result);
 

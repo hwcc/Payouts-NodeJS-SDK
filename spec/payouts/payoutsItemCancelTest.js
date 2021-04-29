@@ -21,6 +21,9 @@ describe('PayoutsItemCancelRequest', function () {
   it('Cancels an indivdual payout-item', function (done) {
     getPayout()
       .then((getPayoutsResponse) => {
+
+        console.log(JSON.stringify(getPayoutsResponse.statusCode, null, 4));
+
         chai.assert.equal(getPayoutsResponse.statusCode, 200);
         chai.assert.isNotNull(getPayoutsResponse.result);
 
