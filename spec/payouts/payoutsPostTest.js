@@ -80,7 +80,8 @@ describe('CreatePayoutsReqeust', function () {
         chai.assert.equal("This is a test transaction from SDK", responseBody.batch_header.sender_batch_header.email_subject);
         chai.assert.equal("SDK payouts test txn", responseBody.batch_header.sender_batch_header.email_message);
 
-        console.log(JSON.stringify(responseBody, null, 4));
+        console.log(`Response: ${JSON.stringify(createResponse)}`);
+//        console.log(JSON.stringify(createResponse, null, 4));
       });
   });
 });
