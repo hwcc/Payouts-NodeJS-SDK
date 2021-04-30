@@ -33,7 +33,8 @@ describe('PayoutsItemGetRequest', function () {
             chai.assert.equal("Test_txn_1", responseBody.payout_item.sender_item_id);
             chai.assert.equal("payout-sdk-1@paypal.com", responseBody.payout_item.receiver);
 
-            console.log(JSON.stringify(responseBody, null, 4));
+            console.log(`Response: ${JSON.stringify(getResponse)}`);
+//            console.log(JSON.stringify(responseBody, null, 4));
           })
       });
   });

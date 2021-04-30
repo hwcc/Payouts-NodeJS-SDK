@@ -50,7 +50,8 @@ describe('PayoutsGetRequest', function () {
         chai.assert.equal("Test_txn_1", firstPayout.payout_item.sender_item_id);
         chai.assert.equal("payout-sdk-1@paypal.com", firstPayout.payout_item.receiver);
 
-        console.log(JSON.stringify(responseBody, null, 4));
+        console.log(`Response: ${JSON.stringify(getResponse)}`);
+//        console.log(JSON.stringify(responseBody, null, 4));
       }));
   });
 });
